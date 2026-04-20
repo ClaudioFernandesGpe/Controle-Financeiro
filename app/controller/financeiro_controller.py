@@ -15,5 +15,5 @@ def calcular_saldo():
             saldo += transacao["valor"]
         else:
             saldo -= transacao["valor"]
-        return {"saldo": saldo}
+    return {"saldo": saldo}
         
