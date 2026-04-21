@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF Finance App | Sistema de Controle Financeiro Pessoal</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title-app">CF Finance App</h1>
+        <h4 class="subtitle-app">Controle Financeiro Pessoal</h4>
+    </header>
+    <main class="wrapper">
+        <div class="saldo-card">
+            <p class="card-title">Saldo Atual: </p>
+            <h4 id="saldo"> R$ 0</h4>
+        </div>
+        <div class="transacoes">
+            <div class="receitas-card">
+                <p class="card-title">Receitas: </p>
+                <h4 id="entradas"> R$ 0</h4>
+            </div>
+            <div class="despesas-card">
+                <p class="card-title">Despesas: </p>
+                <h4 id="saidas"> R$ 0</h4>
+            </div>
+        </div>
+    </main>
+
+    <section class="add-transacao wrapper">
+        <h2 class="subtitle">Adicionar Transação</h2>
+
+        <form action="" class="form-transacao">
+
+            <input type="text" name="descricao" id="descricao" placeholder="Descrição">
+
+            <input type="number" name="valor" id="valor" placeholder="Valor">
+
+            <select name="tipo" id="tipo">
+                <option value="entrada">Receita</option>
+                <option value="saida">Despesa</option>
+            </select>
+
+            <input type="text" name="categoria" id="categoria" placeholder="Categoria">
+
+            <button type="submit" class="btn-submit" onclick="criarTransacao()">Enviar</button>
+        </form>
+    </section>
+
+    <section class="listar-transacao wrapper">
+        <h2 class="subtitle">Transações</h2>
+        <ul id="lista_transacoes">
+
+        </ul>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
